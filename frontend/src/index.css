@@ -1,0 +1,274 @@
+:root {
+  /* Brand Palette from Reference Image */
+  --color-purple: #B298E7;
+  --color-purple-hover: #9E7FE0;
+  --color-purple-dark: #6C4EB8;
+  --color-purple-light: #F2EEFB;
+
+  --color-cyan: #B8E3E9;
+  --color-cyan-hover: #A1D7DF;
+  --color-cyan-dark: #1E606B;
+  --color-cyan-light: #F0F9FB;
+
+  --color-pink: #F5B8D5;
+  --color-pink-hover: #EE9FC6;
+  --color-pink-dark: #8C295F;
+  --color-pink-light: #FDF1F7;
+
+  --color-light-pink: #F9BEDD;
+
+  /* Neutrals & Functional Colors */
+  --bg-main: #F7F8FC;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #FAFBFD;
+  --text-primary: #17152B;
+  --text-secondary: #57556E;
+  --text-muted: #8785A2;
+  --border-color: rgba(178, 152, 231, 0.25);
+  --border-subtle: #E8EBF5;
+  --border-focus: #B298E7;
+
+  /* Brand Gradients */
+  --grad-purple-pink: linear-gradient(135deg, #B298E7 0%, #F5B8D5 100%);
+  --grad-cyan-purple: linear-gradient(135deg, #B8E3E9 0%, #B298E7 100%);
+  --grad-hero: linear-gradient(145deg, #FAF8FE 0%, #F1F8FA 50%, #FCF5F9 100%);
+  --grad-card-glow: linear-gradient(180deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.8) 100%);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(45, 30, 80, 0.04);
+  --shadow-md: 0 8px 24px rgba(45, 30, 80, 0.07);
+  --shadow-lg: 0 16px 40px rgba(45, 30, 80, 0.1);
+  --shadow-glow: 0 8px 30px rgba(178, 152, 231, 0.3);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  /* Typography */
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.25;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font-main);
+}
+
+input, select, textarea {
+  font-family: var(--font-main);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ECEEF8;
+}
+::-webkit-scrollbar-thumb {
+  background: #C8BEDE;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-purple);
+}
+
+/* Global utility classes */
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.brand-gradient-text {
+  background: var(--grad-purple-pink);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.brand-btn-primary {
+  background: var(--grad-purple-pink);
+  color: #17152B;
+  font-weight: 600;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 11px 22px;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(178, 152, 231, 0.35);
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.brand-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(178, 152, 231, 0.45);
+  background: linear-gradient(135deg, #BFA7F0 0%, #FAC6DE 100%);
+}
+
+.brand-btn-secondary {
+  background: #FFFFFF;
+  color: var(--text-primary);
+  font-weight: 600;
+  border: 1.5px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.brand-btn-secondary:hover {
+  border-color: var(--color-purple);
+  background: var(--color-purple-light);
+  transform: translateY(-1px);
+}
+
+.card-luxury {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.card-luxury:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(178, 152, 231, 0.45);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.badge-purple {
+  background-color: var(--color-purple-light);
+  color: var(--color-purple-dark);
+  border: 1px solid rgba(178, 152, 231, 0.4);
+}
+
+.badge-cyan {
+  background-color: var(--color-cyan-light);
+  color: var(--color-cyan-dark);
+  border: 1px solid rgba(184, 227, 233, 0.6);
+}
+
+.badge-pink {
+  background-color: var(--color-pink-light);
+  color: var(--color-pink-dark);
+  border: 1px solid rgba(245, 184, 213, 0.5);
+}
+
+.badge-neutral {
+  background-color: #EDEFF7;
+  color: #43415E;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  color: var(--text-primary);
+  background: #FFFFFF;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.form-input:focus {
+  border-color: var(--color-purple);
+  box-shadow: 0 0 0 3px rgba(178, 152, 231, 0.25);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Leaflet Custom Popup Styling */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 1px solid var(--border-color) !important;
+  padding: 4px !important;
+}
+
+.leaflet-popup-content {
+  margin: 10px 12px !important;
+  line-height: 1.4 !important;
+}
+
+/* Integrity Banner */
+.integrity-banner {
+  background: linear-gradient(90deg, #F3EDFA 0%, #EFF9FB 100%);
+  border-bottom: 1px solid rgba(178, 152, 231, 0.3);
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
