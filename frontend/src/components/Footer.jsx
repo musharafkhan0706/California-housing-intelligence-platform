@@ -55,7 +55,7 @@ export default function Footer({ onNavigate }) {
               <li><button onClick={() => onNavigate('estimator')} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left' }}>Machine Learning Price Estimator</button></li>
               <li><button onClick={() => onNavigate('market')} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left' }}>Market Insights & Analytics</button></li>
               <li><button onClick={() => onNavigate('affordability')} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left' }}>Affordability & EMI Planner</button></li>
-              <li><button onClick={() => onNavigate('compare')} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left' }}>Side-by-Side District Compare</button></li>
+              <li><button onClick={() => onNavigate('compare')} style={{ background: 'none', border: 'none', color: 'inherit', cursor: 'pointer', textAlign: 'left' }}>Side-by-Side Housing Record Compare</button></li>
             </ul>
           </div>
 

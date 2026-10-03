@@ -171,9 +171,9 @@ export default function UserDashboardPage({
           {favorites.length === 0 ? (
             <div className="card-luxury" style={{ padding: '48px', textAlign: 'center' }}>
               <Heart size={32} color="var(--color-purple-dark)" style={{ marginBottom: '12px' }} />
-              <h3 style={{ fontSize: '1.2rem', marginBottom: '6px' }}>Your saved homes will appear here</h3>
+              <h3 style={{ fontSize: '1.2rem', marginBottom: '6px' }}>Your saved housing records will appear here</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', marginBottom: '20px' }}>
-                Browse districts in the explorer and click the heart icon to save records with personal notes.
+                Browse housing records in the explorer and click the heart icon to save records with personal notes.
               </p>
               <button onClick={() => onNavigate('explore')} className="brand-btn-primary">
                 Explore California Housing
@@ -249,7 +249,7 @@ export default function UserDashboardPage({
               <Calculator size={32} color="var(--color-purple-dark)" style={{ marginBottom: '12px' }} />
               <h3 style={{ fontSize: '1.2rem', marginBottom: '6px' }}>Your previous estimates will appear here</h3>
               <p style={{ color: 'var(--text-muted)', fontSize: '0.88rem', marginBottom: '20px' }}>
-                Run home valuation predictions with custom demographic variables.
+                Run housing value predictions with custom demographic variables.
               </p>
               <button onClick={() => onNavigate('estimator')} className="brand-btn-primary">
                 Launch Price Estimator

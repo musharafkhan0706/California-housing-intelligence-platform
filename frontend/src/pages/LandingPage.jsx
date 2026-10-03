@@ -7,7 +7,7 @@ import {
 export default function LandingPage({ onNavigate }) {
   const highlights = [
     {
-      title: "Census District Granularity",
+      title: "Census Record Coverage",
       desc: "Comprehensive 20,640 California block groups representing historical demographics and room ratios.",
       badge: "20,640 Housing Records",
       badgeClass: "badge-purple",
@@ -28,8 +28,8 @@ export default function LandingPage({ onNavigate }) {
       icon: ShieldCheck,
     },
     {
-      title: "Gemini AI Explanations",
-      desc: "Grounded natural language insights explaining why certain districts command premiums.",
+      title: "AI-Assisted Explanations",
+      desc: "Grounded natural language insights explaining why certain housing records command premiums.",
       badge: "AI Grounded",
       badgeClass: "badge-purple",
       icon: Bot,
@@ -94,7 +94,7 @@ export default function LandingPage({ onNavigate }) {
               maxWidth: '720px',
               margin: '0 auto 36px auto'
             }}>
-              Explore housing data, estimate property values, compare districts, and understand affordability using machine learning and transparent historical data.
+              Explore housing data, estimate property values, compare housing records, and understand affordability using machine learning and transparent historical data.
             </p>
 
             {/* Hero CTAs */}
@@ -121,7 +121,7 @@ export default function LandingPage({ onNavigate }) {
                 style={{ padding: '14px 28px', fontSize: '1.05rem', borderRadius: 'var(--radius-sm)' }}
               >
                 <Calculator size={20} color="var(--color-purple-dark)" />
-                <span>Estimate Home Value</span>
+                <span>Estimate Housing Value</span>
               </button>
             </div>
 

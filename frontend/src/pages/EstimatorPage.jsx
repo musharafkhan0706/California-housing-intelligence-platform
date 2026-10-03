@@ -538,7 +538,7 @@ export default function EstimatorPage({ user }) {
 
                 {aiLoading && (
                   <div style={{ fontSize: '0.82rem', color: 'var(--text-muted)' }}>
-                    Gemini is generating explanation...
+                    AI Assistant is generating explanation...
                   </div>
                 )}
 
@@ -552,7 +552,7 @@ export default function EstimatorPage({ user }) {
                     lineHeight: 1.5,
                     color: 'var(--text-primary)'
                   }}>
-                    <strong style={{ color: 'var(--color-purple-dark)' }}>Gemini Intelligence: </strong>
+                    <strong style={{ color: 'var(--color-purple-dark)' }}>AI-Assisted Explanation: </strong>
                     {aiAnswer}
                   </div>
                 )}

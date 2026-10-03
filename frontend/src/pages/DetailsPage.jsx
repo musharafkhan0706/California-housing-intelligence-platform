@@ -447,7 +447,7 @@ export default function DetailsPage({
               ))}
               {aiLoading && (
                 <div style={{ alignSelf: 'flex-start', padding: '8px 12px', fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-                  Gemini is analyzing district variables...
+                  AI Assistant is analyzing housing variables...
                 </div>
               )}
             </div>
